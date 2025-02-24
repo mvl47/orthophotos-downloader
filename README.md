@@ -67,11 +67,7 @@ With this software, we offer a central, user-friendly solution that allows users
    ```sh
    pip install .        
    ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin ffe-munich/orthophotos-downloader
-   git remote -v # confirm the changes
-   ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
