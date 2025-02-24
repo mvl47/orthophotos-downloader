@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling >= 1.24.2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "orthophotos_downloader"
+version = "0.1.0"
+authors = [{name = "Daniel Godin", email = "contact@dangodin.com"},
+           {name = "Joachim Ferstl", email = "jferstl@ffe.de"},]
+
+description = "Python wrapper for various available WMS services to simplify the download of orthophotos. Currently focused on Germany."
+keywords = ["detection"]
+readme = "README.md"
+
+requires-python = ">=3.10"
+
+dependencies = [
+    "geopandas==0.14.4",
+    "imageio==2.34.0",
+    "matplotlib==3.8.4",
+    "OWSLib==0.30.0",
+    "rasterio==1.3.10",
+    "requests==2.31.0",
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: GIS",
+    "License :: OSI Approved :: Apache Software License",
+
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "pytest"
+]
+
+[project.urls]
+Repository = "https://github.com/ffe-munich/orthophotos-downloader"
