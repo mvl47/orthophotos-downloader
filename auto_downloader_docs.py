@@ -141,6 +141,9 @@ def example_cross_border_area():
         print(f"{state_name}: {num_images} images downloaded")
     
     print(f"Total images downloaded: {total_images}")
+    
+    # Automatische Erkennung und Download von Orthophotos über Bundesländergrenzen hinweg
+    # Diese Funktion zeigt, wie das System automatisch mehrere WMS-Dienste verwendet
 
 
 def example_migration_from_manual():
@@ -260,9 +263,6 @@ Features:
 - Geometric Intersection: Calculates the exact intersection geometry for each state
 - WMS Service Mapping: Automatically maps each state to its corresponding WMS downloader class
 - Multi-Service Downloads: Downloads from all relevant WMS services in parallel
-- Organized Output: Creates separate directories for each state's downloads
-- Error Handling: Gracefully handles failures for individual states
-- Multiple Image Types: Supports RGB, CIR, and RGBI downloads
 - Flexible Input: Accepts Shapely Polygons, GeoSeries, or GeoDataFrames
 
 Supported Image Types:
