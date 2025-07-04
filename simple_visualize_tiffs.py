@@ -68,8 +68,9 @@ def visualize_tiffs(directory, max_images=9):
 
 def main():
     """Main function with automatic path detection."""
-    # Priority search paths (Ulm first, then Mainz)
+    # Priority search paths (Lauenburg first, then Ulm, then Mainz)
     search_paths = [
+        "./lauenburg_orthophotos",
         "./ulm_multi_state_test", 
         "./ulm_orthophotos",
         "./mainz_bbox_test",
@@ -86,7 +87,7 @@ def main():
                 break
         
         if not directory:
-            print("❌ No TIFF directories found! Run download_city.py first")
+            print("❌ No TIFF directories found! Run download_city_new.py first")
             return
     
     visualize_tiffs(directory)
