@@ -5,12 +5,29 @@ build-backend = "hatchling.build"
 [project]
 name = "orthophotos_downloader"
 version = "0.1.0"
-authors = [{name = "Daniel Godin", email = "contact@dangodin.com"},
-           {name = "Joachim Ferstl", email = "jferstl@ffe.de"},]
+authors = [
+    {name = "Daniel Godin", email = "contact@dangodin.com"},
+    {name = "Joachim Ferstl", email = "jferstl@ffe.de"},
+]
+maintainers = [
+    {name = "Daniel Godin", email = "contact@dangodin.com"},
+    {name = "Joachim Ferstl", email = "jferstl@ffe.de"},
+]
 
 description = "Python wrapper for various available WMS services to simplify the download of orthophotos. Currently focused on Germany."
-keywords = ["detection"]
+keywords = [
+    "orthophotos", 
+    "wms", 
+    "germany", 
+    "aerial-imagery", 
+    "gis", 
+    "remote-sensing", 
+    "geospatial",
+    "download",
+    "raster"
+]
 readme = "README.md"
+license = {text = "Apache-2.0"}
 
 requires-python = ">=3.10"
 
@@ -26,19 +43,31 @@ dependencies = [
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
     "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
     "License :: OSI Approved :: Apache Software License",
-
     "Operating System :: OS Independent",
-    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11", 
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
 ]
+
+[project.urls]
+Homepage = "https://github.com/ffe-munich/orthophotos-downloader"
+Repository = "https://github.com/ffe-munich/orthophotos-downloader"
+Documentation = "https://github.com/ffe-munich/orthophotos-downloader"
+"Bug Tracker" = "https://github.com/ffe-munich/orthophotos-downloader/issues"
+Changelog = "https://github.com/ffe-munich/orthophotos-downloader/releases"
 
 [project.optional-dependencies]
 dev = [
     "black",
-    "flake8",
-    "pytest"
+    "flake8", 
+    "pytest",
+    "build",
+    "twine"
 ]
-
-[project.urls]
-Repository = "https://github.com/ffe-munich/orthophotos-downloader"
