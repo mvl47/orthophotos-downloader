@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "orthophotos_downloader"
-version = "0.1.0rc1"
+version = "0.1.0rc2"
 authors = [
     {name = "Daniel Godin", email = "contact@dangodin.com"},
     {name = "Joachim Ferstl", email = "jferstl@ffe.de"},
