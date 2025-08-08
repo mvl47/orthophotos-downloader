@@ -1,5 +1,5 @@
 # Version information
-__version__ = "0.1.0rc3"
+__version__ = "0.1.0rc4"
 
 # Lazy imports to avoid heavy dependencies during package introspection
 def _lazy_import():
