@@ -1,8 +1,16 @@
 {
+<<<<<<< HEAD
 	"folders": [
 		{
 			"name": "orthophotos-downloader-1",
 			"path": "."
 		}
 	]
+=======
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
+>>>>>>> deploy-test
 }
