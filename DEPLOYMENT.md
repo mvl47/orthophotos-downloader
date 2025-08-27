@@ -201,3 +201,56 @@ After deployment, monitor:
 5. Celebrate! 🎉
 
 For questions or issues, please open a GitHub issue or contact the maintainers.
+
+---
+
+## Screenshots (placeholders)
+
+Below are example screenshots that your colleagues should capture and place in `DEPLOYMENT-images/` with the suggested filenames. The PDF generator will include these images in the final PDF.
+
+- ![Create API Token](DEPLOYMENT-images/01_pypi_create_token.png)
+  - Screenshot: PyPI/TestPyPI - Create API token page
+
+- ![Add GitHub Secret](DEPLOYMENT-images/02_github_secret.png)
+  - Screenshot: GitHub - Add new repository secret
+
+- ![Create Environment](DEPLOYMENT-images/03_github_env.png)
+  - Screenshot: GitHub - Create `release` environment and protection rules
+
+- ![Push Tag](DEPLOYMENT-images/04_tag_push.png)
+  - Screenshot: GitHub - Tags / Git push confirmation
+
+- ![Actions Run](DEPLOYMENT-images/05_actions_run.png)
+  - Screenshot: GitHub - Actions run success page
+
+---
+
+## Generate PDF (for colleagues)
+
+Option A — Use GitHub Actions (recommended):
+- Open the repository -> Actions -> select "Build Deployment PDF" -> Run workflow
+- The workflow will convert `DEPLOYMENT.md` into `DEPLOYMENT.pdf` and upload it as an artifact.
+
+Option B — Generate locally:
+- Install prerequisites (Debian/Ubuntu):
+  ```bash
+  sudo apt update
+  sudo apt install -y pandoc texlive-xetex texlive-fonts-recommended
+  ```
+- Run the helper script:
+  ```bash
+  chmod +x scripts/generate-pdf-locally.sh
+  ./scripts/generate-pdf-locally.sh
+  ```
+
+## Notes for preparing screenshots
+- Use 1280×720 resolution or similar for legibility
+- Crop sensitive data (tokens) before committing
+- Add screenshots to `DEPLOYMENT-images/` and commit the images so CI can include them
+
+## Files added by this guide
+- `.github/workflows/build-deployment-pdf.yml` — GitHub Action to build PDF
+- `scripts/generate-pdf-locally.sh` — helper to build PDF locally
+- `DEPLOYMENT-images/` — folder for screenshots
+
+Add these files to the repository and notify colleagues to follow the instructions above.

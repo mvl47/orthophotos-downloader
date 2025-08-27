@@ -1,0 +1,32 @@
+name: Build Deployment PDF
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'DEPLOYMENT.md'
+      - 'DEPLOYMENT-images/**'
+
+jobs:
+  build-pdf:
+    name: Build DEPLOYMENT.pdf
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pandoc and TeX (for PDF generation)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended
+
+      - name: Convert DEPLOYMENT.md to PDF
+        run: |
+          pandoc DEPLOYMENT.md -o DEPLOYMENT.pdf --pdf-engine=xelatex --metadata title="PyPI Deployment Guide" --resource-path=DEPLOYMENT-images
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-pdf
+          path: DEPLOYMENT.pdf
